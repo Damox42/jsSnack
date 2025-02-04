@@ -5,18 +5,11 @@ function stampaCani() {
     dogs.forEach((item) => {
         const card = document.createElement('div')
     
-        const nomeCane = document.createElement('h1')
-        nomeCane.textContent = item.name
+        const [name, breed, image] = item
     
-        const razzaCane = document.createElement('h2')
-        razzaCane.textContent = item.breed
-    
-        const immagineCane = document.createElement('img')
-        immagineCane.src = item.image
-    
-        card.appendChild(nomeCane)
-        card.appendChild(razzaCane)
-        card.appendChild(immagineCane)
+        card.appendChild(name)
+        card.appendChild(breed)
+        card.appendChild(image)
         document.body.appendChild(card)
     })
 }
